@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>让网页的Title标题文字滚动显示效果</title>
+</head>
+<body bgcolor="#ffffff" onload="newtext()">
+<script language=javascript >
+var text=document.title
+var timerID
+function newtext() {
+            clearTimeout(timerID)                  
+            document.title=text.substring(1,text.length)+text.substring(0,1)
+            text=document.title.substring(0,text.length)
+            timerID = setTimeout("newtext()", 100)
+}
+</script>
+</body>
+</html>
+<br>预览效果请看标题栏 ↑<br><hr> 收集于互联网，只为兴趣与学习交流，不作商业用途。来源：源码爱好者</font></p>
